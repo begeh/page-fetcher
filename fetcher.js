@@ -18,14 +18,14 @@ request(webpage, (error, response, body) => {
     if (err) {
       console.log("File path is invalid");
       process.exit();
-    };
+    }
     if (fs.existsSync(path)) {
       rl.question("File already exists. Override?: ('Y' for Yes)  ", (answer) => {
         if (answer !== 'Y') {
           process.exit();
         }
         fs.stat(path, (err, stats) => {
-          if (err) throw error
+          if (err) throw error;
           console.log(`Downloaded and saved ${stats['size']} bytes to ${path}`);
         });
         rl.close();
