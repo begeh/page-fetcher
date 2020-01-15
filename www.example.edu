@@ -1,0 +1,3 @@
+(body) =>{
+    console.log(fs.statSync(example)['size']);
+  }
