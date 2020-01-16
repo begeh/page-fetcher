@@ -1,6 +1,6 @@
 let text = process.argv.slice(2);
 let webpage = text[0];
-let path = './index.html';
+let path = 'vagrant/fakedir/index.html';
 const fs = require('fs');
 const readline = require('readline');
 const rl = readline.createInterface({
